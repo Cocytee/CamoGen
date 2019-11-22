@@ -1,1 +1,0 @@
-#GUI with setting sliders for processing and CamoGen and display for camo and DA plot
