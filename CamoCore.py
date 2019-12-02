@@ -12,8 +12,8 @@ class TerrainStat:
 		self.Size = 0
 		self.Average = []
 		self.Set = []
-	def setSize(self,nb):
-		self.Size = nb
+	def setSize(self):
+		self.Size = len(self.Set)*len(self.Set[0])
 	def addSet(self,Stat):
 		self.Set.append(Stat)
 	def setAvg(self):
@@ -21,11 +21,13 @@ class TerrainStat:
 
 def imageInfo(file,disp=False):
 	img = cv.imread(file,0)
-	dft = cv.dft(np.float32(img))
+	f = np.fft.fft2(img)
+	fshift = np.ftt.fftshift(f)
+	magnitude_spectrum = 20*np.log(np.abs(fshift))
 	if disp==True :
-		plt.imshow(dft, cmap = 'gray')
-		plt.show
-	return dft
+		plt.imshow(magnitude_spectrum, cmap = 'gray')
+		plt.show()
+	return magnitude_spectrum
 
 #terrainInfo
 	# process & disp (AvegrageImage)
