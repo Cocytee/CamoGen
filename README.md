@@ -13,5 +13,5 @@ So once the user will select a coordinate, it will take a percentage of each pop
 ## Status
 10 to 12 image per SVN
 Julia devellopment succeded to Python
-Displaying FFT on image at differetn resolution to find the best statistical data extraction
-> The minimum attributes for one member of the population will be defined by the smalled image dimension or less
+Displaying FFT on image at different resolution to find the best statistical data extraction
+> The minimum attributes for one member of the population will be defined by the smallest image dimension or less
